@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 
 URL = "mysql+pymysql://root:teste123@localhost:3306/PhoenixRetalsDB"
 
-engine = create_engine(URL)
+engine = create_engine(URL, connect_args={"check_same_thread": False})
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
