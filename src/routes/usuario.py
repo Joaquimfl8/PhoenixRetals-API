@@ -10,13 +10,13 @@ router = APIRouter(
 )
 
 @router.get("/", response_model=list[UsuarioSchema])
-def buscar_todos_notebooks(db: Session = Depends(get_db)):
+def buscar_todos_usuarios(db: Session = Depends(get_db)):
     usuarios = db.query(UsuarioModel).all()
     
     return usuarios
 
 @router.get("/{id}", response_model=UsuarioSchema)
-def buscar_por_id_notebook(id: int, db: Session = Depends(get_db)):
+def buscar_por_id_usuario(id: int, db: Session = Depends(get_db)):
     usuario = db.query(UsuarioModel).filter(UsuarioModel.id == id).first()
     
     if not usuario:
