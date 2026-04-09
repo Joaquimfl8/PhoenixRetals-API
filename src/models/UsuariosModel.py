@@ -3,7 +3,7 @@ from database import Base
 from sqlalchemy.orm import relationship
 
 class NotebookModel(Base):
-    __tablename__ = "notebook"
+    __tablename__ = "Usuario"
 
     id = Column(Integer, primary_key=True, index=True)
     nome = Column(String(50))
