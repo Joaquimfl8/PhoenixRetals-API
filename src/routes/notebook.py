@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from database import get_db
-from models.notebook import NotebookModel
-from schemas.notebook import NotebookSchema
+from models.NotebookModel import NotebookModel
+from schemas.NotebookSchema import NotebookSchema
 
 router = APIRouter(
     prefix = "notebooks",

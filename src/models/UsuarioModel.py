@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, Date, String
 from database import Base
 from sqlalchemy.orm import relationship
 
-class NotebookModel(Base):
+class UsuarioModel(Base):
     __tablename__ = "Usuario"
 
     id = Column(Integer, primary_key=True, index=True)
